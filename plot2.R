@@ -13,7 +13,8 @@ data <-
     filter(Date %in% c(as.Date("2007-02-01", format = "%Y-%m-%d"), as.Date("2007-02-02", format = "%Y-%m-%d"))) %>%    
     transform(Day = weekdays(FullDate, abbreviate = TRUE))
 
+png(filename = "plot2.png", width = 480, height = 480)
+
 with(data, plot(FullDate, Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)"))
 
-dev.copy(png, file = "plot2.png", width = 480, height = 480)
 dev.off()
