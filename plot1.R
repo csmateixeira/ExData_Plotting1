@@ -11,7 +11,7 @@ data <-
     mutate(Date = as.Date(Date, format = "%d/%m/%Y")) %>%
     filter(Date %in% c(as.Date("2007-02-01", format = "%Y-%m-%d"), as.Date("2007-02-02", format = "%Y-%m-%d")))
 
-png(filename = "plot1.png", width = 480, height = 480)
+png(filename = "plot1.png", width = 480, height = 480, bg = "transparent")
 
 hist(data$Global_active_power, xlab = "Global Active Power (kilowatts)", col = "red", main = "Global Active Power")
 

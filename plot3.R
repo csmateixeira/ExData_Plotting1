@@ -13,7 +13,7 @@ data <-
     filter(Date %in% c(as.Date("2007-02-01", format = "%Y-%m-%d"), as.Date("2007-02-02", format = "%Y-%m-%d"))) %>%    
     transform(Day = weekdays(FullDate, abbreviate = TRUE))
 
-png(filename = "plot3.png", width = 480, height = 480)
+png(filename = "plot3.png", width = 480, height = 480, bg = "transparent")
 
 with(data, plot(FullDate, Sub_metering_1, type = "n", xlab = "", ylab = "Energy sub metering"))
 with(data, lines(FullDate, Sub_metering_1, col = "black"))

@@ -13,7 +13,7 @@ data <-
     filter(Date %in% c(as.Date("2007-02-01", format = "%Y-%m-%d"), as.Date("2007-02-02", format = "%Y-%m-%d"))) %>%    
     transform(Day = weekdays(FullDate, abbreviate = TRUE))
 
-png(filename = "plot4.png", width = 480, height = 480)
+png(filename = "plot4.png", width = 480, height = 480, bg = "transparent")
 
 par(mfrow = c(2,2))
 
